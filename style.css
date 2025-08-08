@@ -56,6 +56,7 @@ nav button{
   font-family: 'Martel Sans' , sans-serif;
   gap: 23px;
   padding: 0 30px;
+  flex-wrap: wrap;
 }
 
 
@@ -135,20 +136,22 @@ z-index: 20;
   align-items: center;
 }
 
+
 .secImg{
   position: relative;
 }
 .secImg img{
-  width: 555px;
+  width: 401px;
   z-index: 10;
   position: relative;
+  overflow: hidden;
 }
 
 .secImg video{
   position: absolute;
   top: 51px;
   right: 0;
-  width: 555px;
+  width: 401px;
 }
 
 section.first >div{
@@ -218,6 +221,14 @@ footer .question{
   color: white;
 }
 
+@media screen and (max-width:1300px) {
+  .footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap: 25px;
+}
+}
+
 .footer a{
   
   color: white;
@@ -228,4 +239,56 @@ footer .question{
   display: flex;
   flex-direction: column;
   gap: 23px;
+}
+
+@media screen and (max-width:1300px){
+    nav{
+      max-width: 90vw;
+    }
+
+    .first{
+      flex-wrap: wrap;
+    }
+    .secImg{
+      position: relative;
+    }
+    .secImg img{
+      width: 305px;
+      z-index: 10;
+      position: relative;
+    }
+    .secImg video{
+      width: 305px;
+    }
+    
+.hero :nth-child(1){
+  font-size: 32px;
+}
+
+.hero :nth-child(2){
+  font-size: 18px;
+}
+.hero :nth-child(3){
+  font-size: 18px;
+}
+.hero-buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.faq h2{
+  text-align: center;
+  font-size: 32px;
+}
+
+footer{
+  max-width: 90vw;
+  padding: 5px;
+}
+
+.footer-item{
+  align-items: center;
+}
 }
